@@ -1,4 +1,4 @@
-٧<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8">
@@ -83,7 +83,6 @@
     </div>
 
     <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
-      <!-- فيديو 1: الأحذية -->
       <div class="bg-neutral-900 border border-neutral-800 rounded-2xl p-3 flex flex-col items-center">
         <div class="w-full aspect-[9/16] rounded-xl overflow-hidden bg-black">
           <video class="w-full h-full object-cover" autoplay loop muted playsinline>
@@ -93,7 +92,6 @@
         <p class="text-white font-bold text-sm mt-3">تجفيف الأحذية المبللة</p>
       </div>
 
-      <!-- فيديو 2: القفازات -->
       <div class="bg-neutral-900 border border-neutral-800 rounded-2xl p-3 flex flex-col items-center">
         <div class="w-full aspect-[9/16] rounded-xl overflow-hidden bg-black">
           <video class="w-full h-full object-cover" autoplay loop muted playsinline>
@@ -103,7 +101,6 @@
         <p class="text-white font-bold text-sm mt-3">تجفيف القفازات والملابس</p>
       </div>
 
-      <!-- فيديو 3: لوحة التحكم -->
       <div class="bg-neutral-900 border border-neutral-800 rounded-2xl p-3 flex flex-col items-center">
         <div class="w-full aspect-[9/16] rounded-xl overflow-hidden bg-black">
           <video class="w-full h-full object-cover" autoplay loop muted playsinline>
@@ -115,7 +112,7 @@
     </div>
   </section>
 
-  <!-- استمارة الطلب المربوطة بواتساب -->
+  <!-- استمارة الطلب المربوطة بواتساب وجدول البيانات -->
   <section id="order" class="max-w-xl mx-auto px-4 py-6">
     <div class="bg-neutral-900 border border-neutral-800 rounded-2xl p-6 shadow-2xl">
       <div class="text-center mb-5">
@@ -123,7 +120,7 @@
         <p class="text-neutral-400 text-xs sm:text-sm mt-1">التوصيل متوفر لـ 58 ولاية والدفع بعد استلام وفحص المنتج</p>
       </div>
 
-      <form id="orderForm" class="space-y-4" onsubmit="sendToWhatsApp(event)">
+      <form id="orderForm" class="space-y-4" onsubmit="sendOrder(event)">
         <div>
           <label class="block text-xs font-bold text-neutral-300 mb-1">الاسم الكامل</label>
           <input id="custName" type="text" required placeholder="الاسم واللقب" class="w-full bg-neutral-950 border border-neutral-700 rounded-xl px-4 py-3 text-white placeholder-neutral-500 focus:outline-none focus:border-orange-500">
@@ -215,19 +212,19 @@
           </div>
         </div>
 
-        <button type="submit" class="w-full bg-orange-500 hover:bg-orange-600 text-white font-extrabold py-3.5 rounded-xl text-base shadow-lg shadow-orange-500/25 transition">
+        <button id="submitBtn" type="submit" class="w-full bg-orange-500 hover:bg-orange-600 text-white font-extrabold py-3.5 rounded-xl text-base shadow-lg shadow-orange-500/25 transition">
           تأكيد الطلب عبر واتساب (5200 دج)
         </button>
       </form>
     </div>
   </section>
 
-  <!-- الشريط السفلي الثابت لشاشات الموبايل (Sticky CTA) -->
+  <!-- الشريط السفلي الثابت لشاشات الموبايل -->
   <div class="fixed bottom-0 inset-x-0 bg-neutral-950/95 backdrop-blur-md border-t border-neutral-800 p-2.5 z-50 flex items-center gap-2 max-w-lg mx-auto sm:hidden">
     <a href="#order" class="flex-1 bg-orange-500 text-white text-center font-extrabold py-3 rounded-xl text-sm shadow-md">
       اطلب الآن (5200 دج)
     </a>
-    <a href="https://wa.me/message/TQVBYVNVLINKB1" class="bg-green-600 text-white px-3.5 py-3 rounded-xl flex items-center justify-center text-xs font-bold">
+    <a href="https://wa.me/213659596907" class="bg-green-600 text-white px-3.5 py-3 rounded-xl flex items-center justify-center text-xs font-bold">
       واتساب
     </a>
     <a href="tel:0659596907" class="bg-neutral-800 text-white px-3.5 py-3 rounded-xl flex items-center justify-center text-xs font-bold">
@@ -236,51 +233,58 @@
   </div>
 
   <script>
-    
-function sendToWhatsApp(e) {
-  e.preventDefault();
+    function sendOrder(e) {
+      e.preventDefault();
 
-  var name = document.getElementById('custName').value.trim();
-  var phone = document.getElementById('custPhone').value.trim();
-  var wilaya = document.getElementById('custWilaya').value;
-  var address = document.getElementById('custAddress').value.trim();
+      var btn = document.getElementById('submitBtn');
+      btn.innerText = "جاري تأكيد الطلب...";
+      btn.disabled = true;
 
-  // إرسال بيانات الطلب إلى Google Sheets
-  var sheetUrl = "https://script.google.com/macros/s/AKfycbwYmve6L1IvlX4enx-nwzAJxj79FepM06J0flr1KUi44EevcszVriLpgUrDle9s5WlEWA/exec";
+      var name = document.getElementById('custName').value.trim();
+      var phone = document.getElementById('custPhone').value.trim();
+      var wilaya = document.getElementById('custWilaya').value;
+      var address = document.getElementById('custAddress').value.trim();
 
-  var payload = new URLSearchParams({
-    name: name,
-    phone: phone,
-    wilaya: wilaya,
-    address: address
-  });
+      // رابط Apps Script الخاص بك
+      var sheetUrl = "https://script.google.com/macros/s/AKfycbwYmve6L1IvlX4enx-nwzAJxj79FepM06J0flr1KUi44EevcszVriLpgUrDle9s5WlEWA/exec";
 
-  fetch(sheetUrl, {
-    method: "POST",
-    mode: "no-cors",
-    headers: {
-      "Content-Type": "application/x-www-form-urlencoded;charset=UTF-8"
-    },
-    body: payload.toString()
-  }).catch(function(error) {
-    console.error("خطأ في إرسال الطلب إلى الجدول:", error);
-  });
+      // 1. إرسال البيانات إلى Google Sheets
+      var payload = new URLSearchParams({
+        name: name,
+        phone: phone,
+        wilaya: wilaya,
+        address: address,
+        state: wilaya,
+        sku: 'مجفف الأحذية الكهربائي',
+        price: '5200'
+      });
 
-  // فتح واتساب بالطلب
-  var message = "السلام عليكم، أريد طلب مجفف الأحذية الذكي:\n\n"
-    + "الاسم: " + name + "\n"
-    + "رقم الهاتف: " + phone + "\n"
-    + "الولاية: " + wilaya + "\n"
-    + "العنوان والبلدية: " + address + "\n"
-    + "السعر الإجمالي: 5200 دج (الدفع عند الاستلام)";
+      fetch(sheetUrl, {
+        method: "POST",
+        mode: "no-cors",
+        headers: {
+          "Content-Type": "application/x-www-form-urlencoded;charset=UTF-8"
+        },
+        body: payload.toString()
+      });
 
-  window.open(
-    "https://wa.me/message/TQVBYVNVLINKB1?text="
-      + encodeURIComponent(message),
-    "_blank"
-  );
-}
+      // 2. نص رسالة الواتساب
+      var message = "السلام عليكم، أريد طلب مجفف الأحذية الذكي:\n\n"
+        + "👤 الاسم: " + name + "\n"
+        + "📞 رقم الهاتف: " + phone + "\n"
+        + "📍 الولاية: " + wilaya + "\n"
+        + "🏠 العنوان والبلدية: " + address + "\n"
+        + "💰 السعر الإجمالي: 5200 دج (الدفع عند الاستلام)";
 
+      // 3. التوجيه المباشر لرقم هاتفك مع الرسالة المكتوبة
+      var whatsappUrl = "https://wa.me/213659596907?text=" + encodeURIComponent(message);
+
+      setTimeout(function() {
+        btn.innerText = "تأكيد الطلب عبر واتساب (5200 دج)";
+        btn.disabled = false;
+        window.location.href = whatsappUrl;
+      }, 600);
+    }
   </script>
 
 </body>
