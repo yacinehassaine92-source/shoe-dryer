@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+٧<!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8">
@@ -236,22 +236,51 @@
   </div>
 
   <script>
-    function sendToWhatsApp(e) {
-      e.preventDefault();
-      var name = document.getElementById('custName').value;
-      var phone = document.getElementById('custPhone').value;
-      var wilaya = document.getElementById('custWilaya').value;
-      var address = document.getElementById('custAddress').value;
+    
+function sendToWhatsApp(e) {
+  e.preventDefault();
 
-      var text = "سلام عليكم، أود تأكيد طلب مجفف الأحذية الذكي:%0A%0A"
-               + "👤 *الاسم:* " + encodeURIComponent(name) + "%0A"
-               + "📞 *رقم الهاتف:* " + encodeURIComponent(phone) + "%0A"
-               + "📍 *الولاية:* " + encodeURIComponent(wilaya) + "%0A"
-               + "🏠 *العنوان والبلدية:* " + encodeURIComponent(address) + "%0A"
-               + "💰 *السعر الإجمالي:* 5200 دج (الدفع عند الاستلام)";
+  var name = document.getElementById('custName').value.trim();
+  var phone = document.getElementById('custPhone').value.trim();
+  var wilaya = document.getElementById('custWilaya').value;
+  var address = document.getElementById('custAddress').value.trim();
 
-      window.open("https://wa.me/message/TQVBYVNVLINKB1?text=" + text, "_blank");
-    }
+  // إرسال بيانات الطلب إلى Google Sheets
+  var sheetUrl = "https://script.google.com/macros/s/AKfycbwYmve6L1IvlX4enx-nwzAJxj79FepM06J0flr1KUi44EevcszVriLpgUrDle9s5WlEWA/exec";
+
+  var payload = new URLSearchParams({
+    name: name,
+    phone: phone,
+    wilaya: wilaya,
+    address: address
+  });
+
+  fetch(sheetUrl, {
+    method: "POST",
+    mode: "no-cors",
+    headers: {
+      "Content-Type": "application/x-www-form-urlencoded;charset=UTF-8"
+    },
+    body: payload.toString()
+  }).catch(function(error) {
+    console.error("خطأ في إرسال الطلب إلى الجدول:", error);
+  });
+
+  // فتح واتساب بالطلب
+  var message = "السلام عليكم، أريد طلب مجفف الأحذية الذكي:\n\n"
+    + "الاسم: " + name + "\n"
+    + "رقم الهاتف: " + phone + "\n"
+    + "الولاية: " + wilaya + "\n"
+    + "العنوان والبلدية: " + address + "\n"
+    + "السعر الإجمالي: 5200 دج (الدفع عند الاستلام)";
+
+  window.open(
+    "https://wa.me/message/TQVBYVNVLINKB1?text="
+      + encodeURIComponent(message),
+    "_blank"
+  );
+}
+
   </script>
 
 </body>
