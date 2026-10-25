@@ -1,332 +1,322 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ar" dir="rtl">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#0D2733">
-<title>مجفف الأحذية الذكي - عرض شتوي خاص</title>
-<meta name="description" content="جفف أحذيتك وقفازاتك وقبعاتك بأمان مع التعقيم. 5200 دج فقط، توصيل لـ 58 ولاية والدفع عند الاستلام.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;600;700&display=swap" rel="stylesheet">
-<style>
-:root{--ink:#0D2733;--ink2:#15394A;--frost:#EEF4F7;--paper:#fff;--text:#12303D;--muted:#4A6572;--ember:#C2410C;--ember2:#9A3412;--glow:#FB923C;--ok:#15803D;--err:#B91C1C;--line:#D3E0E7;--r:14px}
-*{box-sizing:border-box;margin:0}
-html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
-body{font-family:'IBM Plex Sans Arabic',system-ui,sans-serif;color:var(--text);background:var(--frost);line-height:1.7;padding-bottom:84px}
-img,video{display:block;max-width:100%;height:auto}
-a{color:inherit}
-:focus-visible{outline:3px solid var(--glow);outline-offset:2px}
-.wrap{max-width:1040px;margin:0 auto;padding:0 18px}
-.top{background:var(--ember2);color:#fff;font-size:.85rem;font-weight:600;text-align:center;padding:8px 14px}
-.top s{opacity:.8}
-.hero{background:var(--ink);color:#fff;padding:28px 0 40px}
-.hero .wrap{display:grid;gap:26px;align-items:center}
-.hero h1{font-size:clamp(1.9rem,6vw,3rem);line-height:1.25;font-weight:700}
-.hero p.lead{color:#C7DAE3;margin-top:10px;max-width:34em}
-.tag{display:inline-block;margin-top:14px;font-size:.85rem;color:var(--glow);border-inline-start:3px solid var(--glow);padding-inline-start:10px}
-.price{display:flex;align-items:baseline;flex-wrap:wrap;gap:6px 14px;margin:20px 0 4px}
-.price b{font-size:2.6rem;font-weight:700;line-height:1}
-.price s{color:#9FB6C2}
-.save{background:var(--glow);color:#3B1405;font-weight:700;font-size:.85rem;padding:2px 10px;border-radius:99px}
-.cta{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px}
-.btn{display:inline-flex;align-items:center;justify-content:center;min-height:50px;padding:0 26px;border-radius:12px;font:700 1rem/1 inherit;font-family:inherit;text-decoration:none;border:2px solid transparent;cursor:pointer;transition:background-color .2s,transform .15s}
-.btn:active{transform:scale(.98)}
-.btn-p{background:var(--ember);color:#fff}
-.btn-p:hover{background:var(--ember2)}
-.btn-g{border-color:#4C6E7F;color:#fff}
-.btn-g:hover{background:var(--ink2)}
-.btn[disabled]{opacity:.7;cursor:wait}
-.shot{position:relative;border-radius:22px;overflow:hidden;background:radial-gradient(circle at 70% 20%,#2A5A70,var(--ink2));box-shadow:0 0 0 1px #2B5265,0 24px 60px -20px rgba(251,146,60,.35)}
-.shot img{width:100%}
-.trust{background:var(--paper);border-bottom:1px solid var(--line)}
-.trust ul{list-style:none;padding:0;display:grid;gap:0;grid-template-columns:repeat(3,1fr)}
-.trust li{padding:14px 8px;text-align:center;font-size:.85rem;font-weight:600;line-height:1.4}
-.trust li+li{border-inline-start:1px solid var(--line)}
-.trust svg{width:26px;height:26px;margin:0 auto 4px;display:block;color:var(--ember)}
-section.s{padding:44px 0}
-h2{font-size:clamp(1.4rem,4vw,2rem);line-height:1.3;font-weight:700;margin-bottom:6px}
-.sub{color:var(--muted);margin-bottom:22px}
-.ben{max-width:760px}
-.ben .img{border-radius:18px;overflow:hidden;border:1px solid var(--line);background:var(--paper)}
-.grid2{display:grid;gap:12px;grid-template-columns:1fr 1fr}
-.card{background:var(--paper);border:1px solid var(--line);border-radius:var(--r);padding:16px}
-.card svg{width:28px;height:28px;color:var(--ember);margin-bottom:6px}
-.card h3{font-size:1rem;font-weight:700;line-height:1.4}
-.card p{font-size:.88rem;color:var(--muted);margin-top:4px;line-height:1.55}
-.vids{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:10px;margin-inline:-18px;padding-inline:18px}
-.vid{flex:0 0 68%;max-width:260px;scroll-snap-align:start}
-.vid video{width:100%;aspect-ratio:9/16;object-fit:cover;border-radius:var(--r);background:#000}
-.vid p{font-weight:600;font-size:.92rem;margin-top:8px}
-.order{background:var(--ink);padding:44px 0 56px;color:#fff}
-.order h2{margin-bottom:4px}
-.order .sub{color:#B5CBD6}
-form{background:var(--paper);color:var(--text);border-radius:20px;padding:22px 18px;display:grid;gap:14px;max-width:520px;margin-inline:auto}
-label{display:block;font-weight:600;font-size:.92rem;margin-bottom:4px}
-input,select{width:100%;min-height:50px;font:inherit;font-size:1rem;color:var(--text);background:#F7FAFB;border:1.5px solid #B7C9D3;border-radius:12px;padding:0 14px}
-input:focus,select:focus{border-color:var(--ember);outline:3px solid #FED7AA}
-input[aria-invalid=true]{border-color:var(--err)}
-.err{color:var(--err);font-size:.82rem;margin-top:3px;min-height:0}
-fieldset.dl{border:0;padding:0;display:grid;gap:8px}
-.dl legend{font-weight:600;font-size:.92rem;margin-bottom:6px;padding:0}
-.opt{display:flex;align-items:center;gap:10px;min-height:50px;padding:0 14px;border:1.5px solid #B7C9D3;border-radius:12px;font-weight:600;cursor:pointer;margin:0}
-.opt input{width:20px;height:20px;min-height:0;accent-color:var(--ember)}
-.opt:has(input:checked){border-color:var(--ember);background:#FFF4EC}
-.opt.off{opacity:.45;cursor:not-allowed}
-.sum{background:var(--frost);border-radius:12px;padding:12px 14px;display:grid;gap:4px;font-size:.92rem}
-.sum div{display:flex;justify-content:space-between;gap:10px}
-.sum .t{font-weight:700;font-size:1.05rem}
-.ok{color:var(--ok);font-weight:600}
-.note{font-size:.82rem;color:var(--muted);text-align:center}
-.bar{position:fixed;inset:auto 0 0 0;z-index:20;background:rgba(13,39,51,.96);backdrop-filter:blur(8px);padding:10px 12px calc(10px + env(safe-area-inset-bottom,0px));display:flex;gap:8px}
-.bar .btn{min-height:48px;padding:0 16px;font-size:.92rem}
-.bar .btn-p{flex:1}
-.bar .wa{background:#15803D;color:#fff}
-.bar .tel{border-color:#4C6E7F;color:#fff}
-footer{background:var(--ink);color:#8FA9B6;text-align:center;font-size:.8rem;padding:0 0 28px}
-@media(min-width:820px){
- body{padding-bottom:0}
- .bar{display:none}
- .hero{padding:48px 0 56px}
- .hero .wrap{grid-template-columns:1.1fr .9fr;gap:48px}
- .trust li{font-size:.95rem}
- .vids{overflow:visible;margin:0;padding:0}
- .vid{flex:1;max-width:none}
-}
-@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn{transition:none}}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>مجفف ومدفئ الأحذية الذكي | دفا الشتاء</title>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+  <style>
+    :root { --navy:#122b3b; --orange:#bd592e; --cream:#f6f2eb; --ink:#172d39; }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { margin:0; font-family:'IBM Plex Sans Arabic',sans-serif; color:var(--ink); background:#fff; }
+    :focus-visible { outline:3px solid #d87946; outline-offset:3px; }
+    .page-wrap { width:100%; overflow-x:hidden; }
+    .hero { background:radial-gradient(circle at 15% 18%,#315268 0%,#122b3b 53%); }
+    .hero-grid { display:grid; grid-template-columns:1.05fr .95fr; align-items:center; gap:clamp(2rem,5vw,5rem); }
+    .hero-copy { display:flex; flex-direction:column; align-items:flex-start; }
+    .hero-photo { width:100%; height:440px; object-fit:cover; border-radius:24px; box-shadow:18px 18px 0 rgba(213,119,69,.72); }
+    .shipping-note { color:#52646c; font-size:.9rem; }
+    .feature-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:16px; }
+    .feature-icon { width:24px; height:24px; fill:none; stroke:currentColor; stroke-width:1.8; stroke-linecap:round; stroke-linejoin:round; }
+    .field { display:block; width:100%; border:1px solid #bdc8cb; border-radius:12px; padding:13px 15px; background:#fff; color:#172d39; font-size:16px; }
+    .field:focus { outline:2px solid #bd592e; outline-offset:1px; }
+    .field[aria-invalid="true"] { border-color:#ae3829; }
+    .error { color:#a62f25; min-height:1.4em; font-size:.85rem; margin-top:4px; }
+    .mobile-cta { display:none; }
+    @media(max-width:800px) {
+      .hero-grid { grid-template-columns:1fr; }
+      .hero-photo { height:330px; box-shadow:10px 10px 0 rgba(213,119,69,.72); }
+      .feature-grid { grid-template-columns:repeat(2,1fr); }
+    }
+    @media(max-width:600px) {
+      .feature-grid { grid-template-columns:1fr; }
+      .mobile-cta { display:block; padding-bottom:env(safe-area-inset-bottom); }
+      body { padding-bottom:calc(96px + env(safe-area-inset-bottom)); }
+      .hero-copy { align-items:stretch; }
+      .hero-order { text-align:center; min-height:52px; display:flex; align-items:center; justify-content:center; }
+    }
+    @media(prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } }
+  </style>
+  <script src="https://cdn.tailwindcss.com/3.4.17" type="text/javascript"></script>
 </head>
 <body>
+  <div class="page-wrap">
+   <!-- Header -->
+   <header class="w-full border-b border-white/10" style="background:#122b3b">
+    <div class="max-w-6xl mx-auto px-5 py-4 flex justify-between items-center gap-4">
+      <span class="font-bold text-white text-xl">دفا الشتاء</span> 
+      <div class="flex items-center gap-3">
+        <a class="hidden sm:inline-block text-white/80 hover:text-white text-sm" href="tel:0659596907">📞 0659596907</a>
+        <a class="rounded-full px-5 py-2 font-semibold text-white text-sm transition hover:brightness-110" style="background:#bd592e" href="#order">اطلب الآن</a>
+      </div>
+    </div>
+   </header>
 
-<svg width="0" height="0" style="position:absolute" aria-hidden="true">
- <defs>
-  <symbol id="i-cash" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="6" width="19" height="12" rx="2"/><circle cx="12" cy="12" r="2.8"/><path d="M6 9.5v.01M18 14.5v.01"/></symbol>
-  <symbol id="i-truck" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 6.5h11v10h-11zM13.5 10h4l3 3v3.5h-7"/><circle cx="7" cy="17.5" r="1.8"/><circle cx="17" cy="17.5" r="1.8"/></symbol>
-  <symbol id="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7.5 3v5.5c0 4.5-3 8-7.5 9.5-4.5-1.5-7.5-5-7.5-9.5V6z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></symbol>
-  <symbol id="i-heat" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3c1 3.5 5 5.5 5 10a5 5 0 01-10 0c0-2 1-3.2 2-4.2.3 1.5 1 2.2 1.8 2.7C11 9 11 6 12 3z"/></symbol>
-  <symbol id="i-glove" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 21v-5l-2.5-4.5a1.3 1.3 0 012.3-1.2L8 12V5a1.3 1.3 0 012.6 0v5V4a1.3 1.3 0 012.6 0v6V5a1.3 1.3 0 012.6 0v6.5l1-1.5a1.3 1.3 0 012.2 1.4L16 17v4z"/></symbol>
-  <symbol id="i-fold" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7l8-3.5L20 7v10l-8 3.5L4 17z"/><path d="M4 7l8 3.5L20 7M12 10.5v10"/></symbol>
- </defs>
-</svg>
+   <main>
+    <!-- Hero Section -->
+    <section class="hero w-full" style="background: radial-gradient(rgb(49, 82, 104), rgb(18, 43, 59));">
+     <div class="hero-grid max-w-6xl mx-auto px-5 py-12 md:py-20">
+      <div class="hero-copy">
+        <span class="inline-block rounded-full border border-white/30 px-4 py-1 mb-5 text-sm" style="color: rgb(251, 210, 179);">رفيقك في الأيام الماطرة والباردة</span>
+        <h1 class="font-bold leading-tight mb-5 text-3xl md:text-4xl text-white">وداعاً لبرودة ورطوبة الأحذية في الشتاء</h1>
+        <p class="leading-8 max-w-xl mb-6 text-gray-200">مجفف ومدفئ الأحذية والقفازات الكهربائي الذكي. يجفف بسرعة، يقضي على الروائح الكريهة ويمنحك راحة تامة طوال اليوم.</p>
+        <div class="flex items-center flex-wrap gap-3 mb-7">
+          <strong class="text-white font-bold text-3xl">5200 دج</strong> 
+          <span class="rounded-full px-4 py-2 font-semibold text-sm" style="background: rgb(245, 217, 196); color: rgb(113, 52, 23);">التوصيل مجاني لـ 58 ولاية</span>
+        </div>
+        <a class="hero-order inline-block rounded-xl px-8 py-4 font-bold text-white shadow-lg transition hover:brightness-110" style="background: rgb(189, 89, 46);" href="#order">اطلب جهازك الآن ←</a>
+      </div>
+      <div>
+        <img class="hero-photo" loading="lazy" src="hand.jpg" alt="مجفف أحذية كهربائي ذكي">
+      </div>
+     </div>
+    </section>
 
-<div class="top">تخفيض شتوي محدود: 5200 دج بدل <s>6500 دج</s></div>
+    <!-- المعرض: صور وفيديوهات حية -->
+    <section class="w-full py-16" style="background:#f6f2eb">
+     <div class="max-w-6xl mx-auto px-5">
+      <h2 class="font-bold mb-3 text-2xl">شاهد الجهاز عن قرب</h2>
+      <p class="mb-8 text-gray-600">صور وفيديوهات حية توضح طريقة عمل الجهاز وفعاليته.</p>
+      
+      <!-- الصور -->
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-10">
+        <img class="w-full h-56 object-cover rounded-2xl shadow-sm bg-white" loading="lazy" src="000.jpg" alt="تفاصيل مجفف الأحذية">
+        <img class="w-full h-56 object-cover rounded-2xl shadow-sm bg-white" loading="lazy" src="111.jpg" alt="استخدام الجهاز في الشتاء">
+        <img class="w-full h-56 object-cover rounded-2xl shadow-sm bg-white" loading="lazy" src="22.jpg" alt="طريقة وضع الحذاء">
+        <img class="w-full h-56 object-cover rounded-2xl shadow-sm bg-white" loading="lazy" src="hand.jpg" alt="حجم الجهاز المحمول">
+      </div>
 
-<header class="hero">
- <div class="wrap">
-  <div>
-   <h1>مجفف الأحذية والملابس الكهربائي</h1>
-   <p class="lead">وداعاً لرطوبة الشتاء والروائح الكريهة. جفف أحذيتك وقفازاتك وقبعاتك بأمان وسرعة.</p>
-   <p class="tag">توزيع حراري 360 درجة مع نظام تعقيم</p>
-   <div class="price"><b>5200 دج</b><s>6500 دج</s><span class="save">وفّر 1300 دج</span></div>
-   <div class="cta">
-    <a class="btn btn-p" href="#order">اطلب الآن</a>
-    <a class="btn btn-g" href="tel:0659596907">اتصل بنا: 0659596907</a>
-   </div>
+      <!-- الفيديوهات -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
+        <div class="rounded-2xl overflow-hidden shadow-sm bg-black">
+          <video class="w-full h-64 object-cover" controls playsinline preload="metadata">
+            <source src="com.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="rounded-2xl overflow-hidden shadow-sm bg-black">
+          <video class="w-full h-64 object-cover" controls playsinline preload="metadata">
+            <source src="fou.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="rounded-2xl overflow-hidden shadow-sm bg-black">
+          <video class="w-full h-64 object-cover" controls playsinline preload="metadata">
+            <source src="power.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="rounded-2xl overflow-hidden shadow-sm bg-black">
+          <video class="w-full h-64 object-cover" controls playsinline preload="metadata">
+            <source src="sex.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+     </div>
+    </section>
+
+    <!-- شريط الضمانات -->
+    <section class="w-full" style="background:#e7edea">
+     <div class="max-w-6xl mx-auto px-5 py-5 grid grid-cols-1 sm:grid-cols-3 gap-3 text-center">
+      <p class="font-semibold text-gray-800">✦ الدفع عند الاستلام</p>
+      <p class="font-semibold text-gray-800">✦ توصيل مجاني إلى 58 ولاية</p>
+      <p class="font-semibold text-gray-800">✦ المعاينة والتجربة قبل الدفع</p>
+     </div>
+    </section>
+
+    <!-- المميزات -->
+    <section class="w-full py-16" style="background:#f6f2eb">
+     <div class="max-w-6xl mx-auto px-5">
+      <h2 class="font-bold mb-3 text-2xl">حل ذكي وعملي لكل أفراد العائلة</h2>
+      <p class="mb-8 text-gray-600">مميزات مصممة خصيصاً لمواجهة برد ورطوبة الشتاء.</p>
+      <div class="feature-grid">
+       <article class="rounded-2xl p-6 shadow-sm bg-white">
+        <svg class="feature-icon mb-5 text-[#bd592e]" viewBox="0 0 24 24" aria-hidden="true">
+         <path d="M12 2v20M4.9 4.9l14.2 14.2M2 12h20M4.9 19.1 19.1 4.9"></path>
+        </svg>
+        <h3 class="font-bold mb-2 text-lg">تجفيف سريع 360°</h3>
+        <p class="leading-7 text-gray-600 text-sm">تدفق هواء دافئ يوزع الحرارة بانتظام لتجفيف الحذاء من الداخل دون إتلافه.</p>
+       </article>
+       <article class="rounded-2xl p-6 shadow-sm bg-white">
+        <svg class="feature-icon mb-5 text-[#bd592e]" viewBox="0 0 24 24" aria-hidden="true">
+         <circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline>
+        </svg>
+        <h3 class="font-bold mb-2 text-lg">مؤقت ذكي مدمج</h3>
+        <p class="leading-7 text-gray-600 text-sm">حدد مدة التشغيل (30، 60، 90، 120 دقيقة) وسيتوقف الجهاز تلقائياً بأمان تام.</p>
+       </article>
+       <article class="rounded-2xl p-6 shadow-sm bg-white">
+        <svg class="feature-icon mb-5 text-[#bd592e]" viewBox="0 0 24 24" aria-hidden="true">
+         <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path><path d="m9 12 2 2 4-4"></path>
+        </svg>
+        <h3 class="font-bold mb-2 text-lg">تعقيم ومحاربة الروائح</h3>
+        <p class="leading-7 text-gray-600 text-sm">يقضي على الرطوبة المسؤولة عن تكون البكتيريا والفطريات والروائح المزعجة.</p>
+       </article>
+       <article class="rounded-2xl p-6 shadow-sm bg-white">
+        <svg class="feature-icon mb-5 text-[#bd592e]" viewBox="0 0 24 24" aria-hidden="true">
+         <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+        </svg>
+        <h3 class="font-bold mb-2 text-lg">قابل للطي وخفيف</h3>
+        <p class="leading-7 text-gray-600 text-sm">تصميم مرن يطوى بسهولة للتخزين في الخزانة أو حمله معك في السفر والرحلات.</p>
+       </article>
+      </div>
+     </div>
+    </section>
+
+    <!-- استمارة الطلب المربوطة بـ Google Sheets -->
+    <section id="order" class="w-full py-16 scroll-mt-6" style="background:#e7edea">
+     <div class="max-w-3xl mx-auto px-5">
+      <div class="rounded-3xl p-6 md:p-10 shadow-xl bg-white">
+       <h2 class="font-bold mb-2 text-2xl">اطلب جهازك الآن</h2>
+       <p class="mb-7 text-gray-600">املأ المعلومات التالية وسيتم تأكيد طلبك وإرساله فوراً.</p>
+       
+       <form id="order-form" novalidate="">
+        <div class="grid sm:grid-cols-2 gap-x-5">
+         <div>
+          <label class="block font-semibold mb-2" for="customer-name">الاسم واللقب</label> 
+          <input id="customer-name" class="field" name="name" type="text" autocomplete="name" required="" placeholder="مثال: يوسف حساني">
+          <p id="name-error" class="error"></p>
+         </div>
+         <div>
+          <label class="block font-semibold mb-2" for="customer-phone">رقم الهاتف</label> 
+          <input id="customer-phone" class="field" name="phone" type="tel" inputmode="numeric" autocomplete="tel" maxlength="10" required="" dir="ltr" placeholder="0659596907">
+          <p id="phone-error" class="error"></p>
+         </div>
+         <div>
+          <label class="block font-semibold mb-2" for="customer-wilaya">الولاية والبلدية</label> 
+          <input id="customer-wilaya" class="field" name="wilaya" type="text" autocomplete="address-level1" required="" placeholder="مثال: باتنة - وسط المدينة">
+          <p id="wilaya-error" class="error"></p>
+         </div>
+         <div>
+          <label class="block font-semibold mb-2" for="quantity">الكمية</label> 
+          <input id="quantity" class="field" name="quantity" type="number" min="1" max="99" step="1" value="1" required="">
+          <p id="quantity-error" class="error"></p>
+         </div>
+        </div>
+
+        <div class="rounded-xl p-5 mt-3 mb-6 flex justify-between items-center gap-3" style="background:#f6f2eb">
+          <span class="font-semibold">المجموع النهائي</span> 
+          <strong id="total-value" class="text-xl text-[#bd592e]" dir="ltr">5,200 دج</strong>
+        </div>
+
+        <p class="shipping-note mb-5 font-semibold text-green-700">✓ التوصيل مجاني لجميع ولايات الوطن (58 ولاية).</p>
+        
+        <button id="submit-button" class="w-full rounded-xl px-6 py-4 font-bold text-white transition hover:brightness-110 disabled:opacity-60 disabled:cursor-wait" style="background: rgb(189, 89, 46);" type="submit">تأكيد الطلب الآن</button>
+        
+        <p id="form-status" class="mt-4 min-h-7 font-semibold text-center" role="status" aria-live="polite"></p>
+       </form>
+
+      </div>
+     </div>
+    </section>
+   </main>
+
+   <footer class="py-8 text-center px-5 text-white" style="background:#122b3b">
+    <p class="text-sm">لأي استفسار يمكنك الاتصال بنا على: 0659596907 / 0562508344</p>
+    <p class="text-xs text-gray-400 mt-2">دفا الشتاء — راحتك ودفء عائلتك في خطوة واحدة.</p>
+   </footer>
+
+   <!-- الشريط السفلي الثابت للهواتف -->
+   <nav class="mobile-cta fixed bottom-0 inset-x-0 z-20 shadow-[0_-8px_30px_rgba(0,0,0,.15)]" aria-label="طلب سريع" style="background:#122b3b">
+    <div class="p-3">
+      <a class="block text-center rounded-xl py-3 font-bold text-white min-h-[52px] flex items-center justify-center transition hover:brightness-110" style="background: rgb(189, 89, 46);" href="#order">اطلب الآن — 5200 دج (توصيل مجاني)</a>
+    </div>
+   </nav>
   </div>
-  <div class="shot"><img src="product.jpg" alt="مجفف الأحذية الذكي" width="600" height="600" fetchpriority="high"></div>
- </div>
-</header>
 
-<div class="trust">
- <div class="wrap">
-  <ul>
-   <li><svg><use href="#i-cash"/></svg>الدفع عند الاستلام</li>
-   <li><svg><use href="#i-truck"/></svg>توصيل لـ 58 ولاية</li>
-   <li><svg><use href="#i-check"/></svg>معاينة قبل الدفع</li>
-  </ul>
- </div>
-</div>
+  <script>
+    const PRICE = 5200;
+    const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzd7Acqz9rV3eIqcHFXF-dU676-NJsxJ0X_znGf1k6LrzQv_2p7hKdjKZzpZBrH2MQP8w/exec";
 
-<section class="s">
- <div class="wrap ben">
-  <div>
-   <h2>جهاز واحد لكل أفراد العائلة</h2>
-   <p class="sub">لا تنتظر ساعات حتى تجف الأحذية. شغّل الجهاز واتركه يعمل.</p>
-   <div class="grid2">
-    <div class="card"><svg><use href="#i-heat"/></svg><h3>تجفيف سريع</h3><p>للأحذية الرياضية والمبللة بمياه الأمطار.</p></div>
-    <div class="card"><svg><use href="#i-glove"/></svg><h3>آمن على الصوف</h3><p>القفازات والقبعات والجوارب دون تلف.</p></div>
-    <div class="card"><svg><use href="#i-check"/></svg><h3>تعقيم</h3><p>يقضي على البكتيريا المسببة للروائح.</p></div>
-    <div class="card"><svg><use href="#i-fold"/></svg><h3>قابل للطي</h3><p>لا يأخذ مساحة عند التخزين.</p></div>
-   </div>
-  </div>
- </div>
-</section>
+    const form = document.getElementById('order-form');
+    const submit = document.getElementById('submit-button');
+    const status = document.getElementById('form-status');
+    const quantity = document.getElementById('quantity');
 
-<section class="s" style="padding-top:0">
- <div class="wrap">
-  <h2>شاهد الجهاز وهو يعمل</h2>
-  <p class="sub">مقاطع حقيقية من الاستخدام.</p>
-  <div class="vids">
-   <div class="vid"><video muted loop playsinline preload="metadata" aria-label="تجفيف الأحذية المبللة"><source src="com.mp4" type="video/mp4"></video><p>تجفيف الأحذية المبللة</p></div>
-   <div class="vid"><video muted loop playsinline preload="metadata" aria-label="تجفيف القفازات والملابس"><source src="gloves.mp4" type="video/mp4"></video><p>تجفيف القفازات والملابس</p></div>
-   <div class="vid"><video muted loop playsinline preload="metadata" aria-label="لوحة التحكم باللمس"><source src="power.mp4" type="video/mp4"></video><p>لوحة تحكم تعمل باللمس</p></div>
-  </div>
- </div>
-</section>
+    const fields = {
+      name: document.getElementById('customer-name'),
+      phone: document.getElementById('customer-phone'),
+      wilaya: document.getElementById('customer-wilaya'),
+      quantity
+    };
 
-<section class="order" id="order">
- <div class="wrap">
-  <h2 style="text-align:center">اطلب الآن</h2>
-  <p class="sub" style="text-align:center">املأ البيانات وسنؤكد طلبك عبر واتساب. تدفع عند الاستلام بعد معاينة المنتج.</p>
-  <form id="orderForm" novalidate>
-   <div><label for="custName">الاسم الكامل</label><input id="custName" autocomplete="name" required placeholder="الاسم واللقب"><div class="err" id="e-name" role="alert"></div></div>
-   <div><label for="custPhone">رقم الهاتف</label><input id="custPhone" type="tel" inputmode="numeric" autocomplete="tel" required maxlength="10" placeholder="05XXXXXXXX" dir="ltr" style="text-align:right"><div class="err" id="e-phone" role="alert"></div></div>
-   <div><label for="custWilaya">الولاية</label><select id="custWilaya" autocomplete="address-level1" required><option value="">اختر الولاية</option></select><div class="err" id="e-wilaya" role="alert"></div></div>
-   <fieldset class="dl"><legend>طريقة التوصيل</legend>
-    <label class="opt"><input type="radio" name="dl" value="home" checked><span>للمنزل</span></label>
-    <label class="opt" id="optDesk"><input type="radio" name="dl" value="desk"><span>استلام من المكتب (Stop Desk)</span></label>
-   </fieldset>
-   <div><label for="custAddress">البلدية والعنوان</label><input id="custAddress" autocomplete="street-address" required placeholder="اسم البلدية أو الحي"><div class="err" id="e-address" role="alert"></div></div>
-   <div class="sum">
-    <div><span>سعر المنتج</span><span>5200 دج</span></div>
-    <div><span>التوصيل</span><span id="shipTxt">اختر الولاية</span></div>
-    <div class="t"><span>المجموع</span><span id="totalTxt">5200 دج</span></div>
-    <div><span>الدفع</span><span class="ok">عند الاستلام والمعاينة</span></div>
-   </div>
-   <button id="submitBtn" class="btn btn-p" type="submit">تأكيد الطلب عبر واتساب</button>
-   <p class="note" id="status" aria-live="polite">سيُفتح واتساب برسالة جاهزة. اضغط إرسال لإتمام الطلب.</p>
-  </form>
- </div>
-</section>
+    function setError(key, message) {
+      fields[key].setAttribute('aria-invalid', message ? 'true' : 'false');
+      document.getElementById(key + '-error').textContent = message;
+    }
 
-<footer><div class="wrap">مجفف الأحذية الذكي · التوصيل لجميع الولايات</div></footer>
+    function updateTotal() {
+      const count = Number(quantity.value);
+      document.getElementById('total-value').textContent =
+        (Number.isInteger(count) && count >= 1 && count <= 99 ? count * PRICE : 0)
+          .toLocaleString('fr-DZ') + ' دج';
+    }
 
-<div class="bar">
- <a class="btn btn-p" href="#order">اطلب الآن (5200 دج)</a>
- <a class="btn wa" href="https://wa.me/213659596907" aria-label="واتساب">واتساب</a>
- <a class="btn tel" href="tel:0659596907" aria-label="اتصال">اتصال</a>
-</div>
+    function validate() {
+      const name = fields.name.value.trim();
+      const phone = fields.phone.value.replace(/\s/g, '');
+      const wilaya = fields.wilaya.value.trim();
+      const count = Number(quantity.value);
 
-<script>
-(function(){
-  // ═══════ جدول أسعار التوصيل (دج) ═══════
-  // كل سطر: [للمنزل (À domicile), المكتب (Stop Desk)]
-  // null = لم يُعبَّأ بعد | "-" = الخيار غير متوفر في هذه الولاية
-  var BASE=5200;
-  var TARIFF=[
-  [1400, 900],   // 01 أدرار
-  [800, 450],    // 02 الشلف
-  [950, 600],    // 03 الأغواط
-  [750, 450],    // 04 أم البواقي
-  [750, 450],    // 05 باتنة
-  [750, 450],    // 06 بجاية
-  [950, 550],    // 07 بسكرة
-  [1100, 650],   // 08 بشار
-  [750, 450],    // 09 البليدة
-  [750, 450],    // 10 البويرة
-  [1600, 1050],  // 11 تمنراست
-  [800, 450],    // 12 تبسة
-  [900, 500],    // 13 تلمسان
-  [800, 450],    // 14 تيارت
-  [750, 450],    // 15 تيزي وزو
-  [650, 400],    // 16 الجزائر العاصمة
-  [950, 500],    // 17 الجلفة
-  [750, 450],    // 18 جيجل
-  [750, 450],    // 19 سطيف
-  [800, 500],    // 20 سعيدة
-  [700, 450],    // 21 سكيكدة
-  [800, 450],    // 22 سيدي بلعباس
-  [500, 300],    // 23 عنابة
-  [700, 450],    // 24 قالمة
-  [700, 450],    // 25 قسنطينة
-  [800, 450],    // 26 المدية
-  [800, 450],    // 27 مستغانم
-  [850, 500],    // 28 المسيلة
-  [800, 450],    // 29 معسكر
-  [1000, 600],   // 30 ورقلة
-  [800, 450],    // 31 وهران
-  [1050, 600],   // 32 البيض
-  ["-", "-"],    // 33 إليزي
-  [750, 450],    // 34 برج بوعريريج
-  [750, 450],    // 35 بومرداس
-  [650, 450],    // 36 الطارف
-  ["-", "-"],    // 37 تندوف
-  [800, "-"],    // 38 تسمسيلت
-  [1000, 600],   // 39 الوادي
-  [750, "-"],    // 40 خنشلة
-  [750, 450],    // 41 سوق أهراس
-  [800, 450],    // 42 تيبازة
-  [750, 450],    // 43 ميلة
-  [800, 450],    // 44 عين الدفلى
-  [1100, 600],   // 45 النعامة
-  [800, 450],    // 46 عين تموشنت
-  [1000, 600],   // 47 غرداية
-  [800, 450],    // 48 غليزان
-  [1400, "-"],  // 49 تيميمون
-  ["-", "-"],    // 50 برج باجي مختار
-  [950, 550],    // 51 أولاد جلال
-  [1000, 900],   // 52 بني عباس
-  [1600, "-"],   // 53 عين صالح
-  [1600, "-"],   // 54 عين قزام
-  [1000, 600],   // 55 تقرت
-  ["-", "-"],    // 56 جانت
-  [950, "-"],    // 57 المغير
-  [1000, "-"]    // 58 المنيعة
-];
+      setError('name', name.length >= 2 ? '' : 'أدخل اسمًا من حرفين على الأقل.');
+      setError('phone', /^0[567]\d{8}$/.test(phone) ? '' : 'أدخل 10 أرقام تبدأ بـ 05 أو 06 أو 07.');
+      setError('wilaya', wilaya ? '' : 'أدخل اسم الولاية والبلدية.');
+      setError('quantity', Number.isInteger(count) && count >= 1 && count <= 99 ? '' : 'اختر كمية صحيحة.');
 
-  ];
-  var W="أدرار|الشلف|الأغواط|أم البواقي|باتنة|بجاية|بسكرة|بشار|البليدة|البويرة|تمنراست|تبسة|تلمسان|تيارت|تيزي وزو|الجزائر العاصمة|الجلفة|جيجل|سطيف|سعيدة|سكيكدة|سيدي بلعباس|عنابة|قالمة|قسنطينة|المدية|مستغانم|المسيلة|معسكر|ورقلة|وهران|البيض|إليزي|برج بوعريريج|بومرداس|الطارف|تندوف|تسمسيلت|الوادي|خنشلة|سوق أهراس|تيبازة|ميلة|عين الدفلى|النعامة|عين تموشنت|غرداية|غليزان|تيميمون|برج باجي مختار|أولاد جلال|بني عباس|عين صالح|عين قزام|تقرت|جانت|المغير|المنيعة".split("|"),sel=document.getElementById('custWilaya');
-  W.forEach(function(n,i){var v=(i<9?"0":"")+(i+1)+" - "+n,o=document.createElement('option');o.value=v;o.textContent=v;sel.appendChild(o)});
+      const invalid = Object.keys(fields).find(key => fields[key].getAttribute('aria-invalid') === 'true');
+      if (invalid) fields[invalid].focus();
+      return !invalid;
+    }
 
-  function fmt(n){return n.toLocaleString('en-US').replace(/,/g,' ')+' دج'}
-  function dtype(){return document.querySelector('input[name=dl]:checked').value}
-  function ship(){
-    var i=sel.selectedIndex-1; if(i<0) return {p:null};
-    var v=TARIFF[i][dtype()==='desk'?1:0];
-    return {p:typeof v==='number'?v:null};
-  }
-  function refresh(){
-    var i=sel.selectedIndex-1, deskOk=i<0||TARIFF[i][1]!=="-", d=document.getElementById('optDesk');
-    d.classList.toggle('off',!deskOk); d.querySelector('input').disabled=!deskOk;
-    if(!deskOk) document.querySelector('input[name=dl][value=home]').checked=true;
-    var s=ship(),st=document.getElementById('shipTxt'),tt=document.getElementById('totalTxt');
-    if(i<0){st.textContent='اختر الولاية';tt.textContent=fmt(BASE);return}
-    if(s.p===null){st.textContent='يُحدد عند التأكيد';tt.textContent=fmt(BASE)+' + التوصيل';return}
-    st.textContent=s.p===0?'مجاني':fmt(s.p); tt.textContent=fmt(BASE+s.p);
-  }
-  sel.addEventListener('change',refresh);
-  [].forEach.call(document.querySelectorAll('input[name=dl]'),function(r){r.addEventListener('change',refresh)});
-  refresh();
+    quantity.addEventListener('input', updateTotal);
+    Object.entries(fields).forEach(([key, input]) => {
+      input.addEventListener('input', () => {
+        if (input.getAttribute('aria-invalid') === 'true') setError(key, '');
+        status.textContent = '';
+      });
+    });
 
-  // الفيديو يعمل فقط عند ظهوره على الشاشة، ويحترم تفضيل تقليل الحركة
-  var vs=[].slice.call(document.querySelectorAll('.vid video'));
-  if(matchMedia('(prefers-reduced-motion:reduce)').matches){vs.forEach(function(v){v.controls=true})}
-  else if('IntersectionObserver' in window){
-    var io=new IntersectionObserver(function(es){es.forEach(function(e){e.isIntersecting?e.target.play().catch(function(){}):e.target.pause()})},{threshold:.4});
-    vs.forEach(function(v){io.observe(v)});
-  }
+    form.addEventListener('submit', async event => {
+      event.preventDefault();
+      status.textContent = '';
+      if (!validate()) return;
 
-  function bad(id,eid,msg){var f=document.getElementById(id);document.getElementById(eid).textContent=msg;f.setAttribute('aria-invalid',msg?'true':'false');return !!msg}
+      submit.disabled = true;
+      submit.textContent = 'جارٍ إرسال طلبك…';
+      status.style.color = '#52646c';
+      status.textContent = 'يرجى الانتظار ثوانٍ معدودة...';
 
-  document.getElementById('orderForm').addEventListener('submit',function(e){
-    e.preventDefault();
-    var name=custName.value.trim(),phone=custPhone.value.replace(/\s/g,''),wilaya=custWilaya.value,address=custAddress.value.trim();
-    var errs=[
-      bad('custName','e-name',name.length<3?'اكتب الاسم الكامل':''),
-      bad('custPhone','e-phone',/^0[567]\d{8}$/.test(phone)?'':'أدخل رقماً صحيحاً من 10 أرقام يبدأ بـ 05 أو 06 أو 07'),
-      bad('custWilaya','e-wilaya',wilaya?'':'اختر الولاية'),
-      bad('custAddress','e-address',address.length<3?'اكتب البلدية أو الحي':'')
-    ];
-    if(errs.some(Boolean)){var f=document.querySelector('[aria-invalid=true]');if(f)f.focus();return}
+      try {
+        const count = Number(quantity.value);
+        const orderData = {
+          name: fields.name.value.trim(),
+          phone: fields.phone.value.replace(/\s/g, ''),
+          wilaya: fields.wilaya.value.trim(),
+          quantity: count,
+          total: (count * PRICE) + ' دج',
+          ordered_at: new Date().toLocaleString('fr-DZ')
+        };
 
-    var sh=ship(),btn=document.getElementById('submitBtn'),st=document.getElementById('status');
-    btn.disabled=true;btn.textContent="جاري تأكيد الطلب...";
+        // إرسال البيانات مباشرة إلى Google Sheets Web App
+        await fetch(GOOGLE_SCRIPT_URL, {
+          method: "POST",
+          mode: "no-cors",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(orderData)
+        });
 
-    // رابط Apps Script الخاص بك (بدون تغيير)
-    var sheetUrl="https://script.google.com/macros/s/AKfycbwYmve6L1IvlX4enx-nwzAJxj79FepM06J0flr1KUi44EevcszVriLpgUrDle9s5WlEWA/exec";
-    var payload=new URLSearchParams({name:name,phone:phone,wilaya:wilaya,address:address,state:wilaya,sku:'مجفف الأحذية الكهربائي',price:'5200',delivery:(dtype()==='desk'?'مكتب':'منزل'),shipping:(sh.p===null?'':sh.p),total:(sh.p===null?'':BASE+sh.p)});
-    fetch(sheetUrl,{method:"POST",mode:"no-cors",headers:{"Content-Type":"application/x-www-form-urlencoded;charset=UTF-8"},body:payload.toString()}).catch(function(){});
+        form.reset();
+        Object.keys(fields).forEach(key => setError(key, ''));
+        updateTotal();
+        status.style.color = '#21624b';
+        status.textContent = '🎉 تم إرسال طلبك بنجاح! سنتصل بك قريباً لتأكيد التوصيل.';
+      } catch (err) {
+        status.style.color = '#a62f25';
+        status.textContent = 'تعذر إرسال الطلب. تحقق من اتصالك بالإنترنت وأعد المحاولة.';
+      } finally {
+        submit.disabled = false;
+        submit.textContent = 'تأكيد الطلب الآن';
+      }
+    });
 
-    var msg="السلام عليكم، أريد طلب مجفف الأحذية الذكي:\n\n"
-      +"👤 الاسم: "+name+"\n📞 رقم الهاتف: "+phone+"\n📍 الولاية: "+wilaya+"\n🏠 العنوان والبلدية: "+address+"\n🚚 التوصيل: "+(dtype()==="desk"?"استلام من المكتب":"للمنزل")+" — "+(sh.p===null?"يُحدد عند التأكيد":fmt(sh.p))+"\n💰 المجموع: "+(sh.p===null?fmt(BASE)+" + التوصيل":fmt(BASE+sh.p))+" (الدفع عند الاستلام)";
-    st.textContent="تم حفظ طلبك. جاري فتح واتساب...";
-    setTimeout(function(){
-      btn.disabled=false;btn.textContent="تأكيد الطلب عبر واتساب";
-      location.href="https://wa.me/213659596907?text="+encodeURIComponent(msg);
-    },600);
-  });
-})();
-</script>
+    updateTotal();
+  </script>
 </body>
 </html>
-
